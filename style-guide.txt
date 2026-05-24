@@ -13,7 +13,7 @@ GUIA DE ESTILO / STYLE GUIDE - PROJETO FRONT-END
 
 ✏️ TIPOGRAFIA (TYPOGRAPHY)
 --------------------------------------------------
-- Fonte Principal: 'Inter', Semi-Bold
+- Fonte Principal: 'Inter', sans-serif
 
 Tamanhos (Font Sizes):
 - Texto Pequeno (Small):      12px (0.75rem)  -> Usar em legendas, rodapés

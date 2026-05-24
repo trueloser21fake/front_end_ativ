@@ -7,6 +7,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Inter', sans-serif;
 
 }
 
@@ -62,9 +63,9 @@ body{
 }
 .login_tittle{
     display: block;
-    font-size: 20px;
-    color:#006eff;
-    font-weight: bolder;
+    font-size: 22px;
+    color:#0C4DA2;
+    font-weight: 700;
 
 
 }
@@ -80,10 +81,10 @@ body{
 
 .login_input{
 
-    border: 1px solid #6a5656;
+    border: 1px solid #6C757D;
     border-radius: 8px;
     padding:10px;
-    color: #6a5656;
+    color: #212529;
     transition-duration: 1s;
 
     
@@ -91,8 +92,9 @@ body{
 .login_input:focus{
 
     transform: scale(1.1);
-    border-color: #006FFD;
+    border-color: #0C4DA2;
     transition-duration: 1s;
+    outline: none;
 }
 
 .login_img{
@@ -116,7 +118,7 @@ body{
     display: block;
     text-decoration: none;
     font-size: 12px;
-    color: #737272;
+    color: #6C757D;
     transition-duration: 1s;
 
 
@@ -131,9 +133,9 @@ body{
 .login_button{
 
         width: 100%;
-        background-color:#006eff;
+        background-color:#0C4DA2;
         border: none;
-        border-radius: 10px;
+        border-radius: 8px;
         padding: 15px;
         transition-duration: 1s;
 
@@ -150,8 +152,8 @@ body{
 .login_dash{
 
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bolder;
+    font-size: 16px;
+    font-weight: 500;
     color: rgb(255, 255, 255);
 
 }

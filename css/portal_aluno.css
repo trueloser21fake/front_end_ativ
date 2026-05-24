@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2937;
+}
+
+/* Barra principal (Do topo da página*/
+.barra-principal {
+  background-color: white;
+  height: 74px;
+  padding: 0 60px;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-ufac {
+  height: 30px;
+  width: auto;
+}
+
+.linha {
+  width: 1px;
+  height: 28px;
+  background-color: #e5e7eb;
+}
+
+.nome-sistema {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #6b7280;
+}
+
+.menu-topo {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-topo li {
+  list-style: none;
+}
+
+.menu-topo a {
+  display: block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.menu-topo a:hover {
+  background-color: #eef6ff;
+  color: #005baa;
+}
+
+.menu-topo a.ativo {
+  background-color: #eef3fb;
+  color: #2f5597;
+  font-weight: bold;
+}
+
+.area-usuario {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icone-notificacao {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone-modo-escuro {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-usuario {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

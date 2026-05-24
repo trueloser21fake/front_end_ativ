@@ -1,0 +1,33 @@
+==================================================
+GUIA DE ESTILO / STYLE GUIDE - PROJETO FRONT-END
+==================================================
+
+🎨 PALETA DE CORES (COLORS)
+--------------------------------------------------
+- Principal (Primary):   #0C4DA2(Bursting Blue)
+- Secundária (Secondary):#6C757D (Cinza Neutro)
+- Fundo (Background):     #FAF8F5 (Off-white / Creme)
+- Texto Principal:       #212529 (Grafite Escuro)
+- Sucesso (Success):     #28A745 (Verde)
+- Erro (Danger):         #DC3545 (Vermelho)
+
+✏️ TIPOGRAFIA (TYPOGRAPHY)
+--------------------------------------------------
+- Fonte Principal: 'Inter', Semi-Bold
+
+Tamanhos (Font Sizes):
+- Texto Pequeno (Small):      12px (0.75rem)  -> Usar em legendas, rodapés
+- Texto Padrão (Body/Normal):  14px (0.875rem) -> Usar em parágrafos comuns
+- Texto Destacado (Medium):    16px (1rem)     -> Usar em menus, botões
+- Subtítulos (H2/H3):         18px / 22px
+- Título Principal (H1):      32px
+
+Espessuras (Font Weights):
+- Regular: 400
+- Medium:  500
+- Bold:    700
+
+📦 ESPAÇAMENTOS & BORDAS (SPACING & RADIUS) - Opcional
+--------------------------------------------------
+- Border Radius padrão: 8px (para botões e cards)
+- Padding padrão: 16px

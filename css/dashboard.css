@@ -33,7 +33,8 @@ body {
 }
 
 .text {
-    margin: 40px;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 
 .div-pai {
@@ -45,8 +46,9 @@ body {
     box-sizing: border-box;
 }
 
-.caledario {
+.calendario {
     flex: 1;
+
     button {
         width: 100%;
         height: 100%;
@@ -87,6 +89,6 @@ body {
 }
 
 button:hover {
-    box-shadow: 
-    0 0 20px #006FFD;
+    box-shadow:
+        0 0 20px #006FFD;
 }

@@ -78,6 +78,11 @@ body {
             width: 88px;
             height: 88px;
         }
+
+        h3 {
+            color: #0C4DA2;
+            padding: 20px;
+        }
     }
 }
 

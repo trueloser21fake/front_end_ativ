@@ -144,8 +144,9 @@ body{
 .login_button:hover{
 
     transform: scale(1.1);
-    
     transition-duration: 1s;
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+
     cursor: pointer;
 
 }
@@ -155,5 +156,4 @@ body{
     font-size: 16px;
     font-weight: 500;
     color: rgb(255, 255, 255);
-
 }

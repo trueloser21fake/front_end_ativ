@@ -1,0 +1,83 @@
+const header = `
+<nav class="barra-principal">
+
+  <div class="marca">
+    <img src="../assets/Logo Ufac (2).svg" alt="Logo da UFAC" class="logo-ufac">
+    <div class="linha"></div>
+    <div class="nome-sistema">Portal do Aluno</div>
+  </div>
+
+  <ul class="menu-topo">
+    <li><a href="portal_aluno.html">Início</a></li>
+    <li><a href="portal_aluno.html">Portal do Aluno</a></li>
+    <li><a href="#">Biblioteca</a></li>
+    <li><a href="#">Horários</a></li>
+    <li><a href="https://sistemas.ufac.br/eticket/login/" target="_blank" rel="noopener noreferrer">Ticket RU</a></li>
+    <li><a href="#">Notícias</a></li>
+  </ul>
+
+  <div class="area-usuario">
+    <img src="../assets/ícones/portal/modo-escuro.png" alt="Modo Escuro" class="icone-modo-escuro">
+    <img src="../assets/ícones/portal/sino.png" alt="Notificações" class="icone-notificacao">
+
+    <a href="perfil.html" class="botao-perfil">
+      <span class="avatar-iniciais">RB</span>
+      <strong>Rani</strong>
+    </a>
+  </div>
+
+</nav>
+`;
+
+const footer = `
+<footer class="rodape">
+  <div class="rodape-conteudo">
+
+    <div class="rodape-coluna maior">
+      <img src="../assets/Logo Ufac (2).svg" alt="Logo da UFAC" class="logo-rodape">
+      <p>Universidade Federal do Acre — Portal Acadêmico.</p>
+      <p>Rod. BR 364, Km 04, Rio Branco — AC.</p>
+    </div>
+
+    <div class="rodape-coluna">
+      <h3>Sistemas</h3>
+      <p>Portal do Aluno</p>
+      <p>Biblioteca</p>
+      <a href="https://sistemas.ufac.br/eticket/login/" target="_blank" rel="noopener noreferrer"><p>Ticket RU</p></a>
+      <p>Horários</p>
+    </div>
+
+    <div class="rodape-coluna">
+      <h3>Institucional</h3>
+      <a href="#"><p>Reitoria</p></a>
+      <a href="#"><p>Extensão e Cultura</p></a>
+      <a href="#"><p>Cursos de Graduação</p></a>
+      <a href="#"><p>Cursos de Pós-Graduação</p></a>
+    </div>
+
+    <div class="rodape-coluna">
+      <h3>Serviços</h3>
+      <a href="#"><p>Acesso aos Sistemas</p></a>
+      <a href="#"><p>E-mail Institucional</p></a>
+      <a href="#"><p>Biblioteca Central</p></a>
+      <a href="#"><p>Serviços de Informação ao Cidadão - SIC</p></a>
+    </div>
+
+    <div class="rodape-coluna">
+      <h3>Contato</h3>
+      <a href="#"><p>Ouvidoria</p></a>
+      <a href="#"><p>Telefones da Ufac</p></a>
+      <a href="#"><p>Núcleo de Tecnologia da Informação - NTI</p></a>
+      <a href="#"><p>Mapa do Campus</p></a>
+    </div>
+
+  </div>
+
+  <div class="rodape-baixo">
+    <p>© 2026 Universidade Federal do Acre · UFAC</p>
+  </div>
+</footer>
+`;
+
+document.getElementById("header").innerHTML = header;
+document.getElementById("footer").innerHTML = footer;

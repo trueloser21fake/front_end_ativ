@@ -110,6 +110,13 @@ body {
     justify-content: center;
 }
 
+h2 {
+   margin-top: 20px;
+   margin-left: 40px;
+   font-size: 20px;
+}
+
+/* Tabela de horários*/
 .tabelaPrincipal {
     display: flex;
     flex-direction: column;
@@ -140,7 +147,6 @@ body {
     font-weight: 500;
 }
 
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -163,8 +169,12 @@ th {
 }
 
 td:first-child {
-    font-weight: 800;
-    background-color: #FAF8F5;
-    color: #4b5563;
-    width: 100px;
+    font-weight: 750;
+    background-color: #ededec;
+    width: 150px;
 }
+
+td:not(:first-child):not(:empty) {
+    background-color: #3f83f756;
+}
+/* Fim da tabela de horarios*/

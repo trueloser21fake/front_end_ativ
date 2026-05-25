@@ -23,6 +23,18 @@ input {
     border: 1px solid #cbd5e1;
     border-radius: 8px;
     font-size: 16px;
+    transition-duration: 1s;
+}
+input:hover {
+    border-color: #0c4da2;
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+input:focus {
+    transform: scale(1.1);
+    border-color: #0C4DA2;
+    transition-duration: 1s;
+    outline: none;
 }
 
 .botoes-pesquisa {
@@ -37,4 +49,10 @@ button {
     background: #0c4da2;
     color: white;
     cursor: pointer;
+    transition-duration: 1s;
+
+}
+button:hover {
+    background: #0966de;
+    transition-duration: 1s;
 }

@@ -11,7 +11,7 @@ const header = `
     <li><a href="portal_aluno.html">Início</a></li>
     <li><a href="portal_aluno.html">Portal do Aluno</a></li>
     <li><a href="#">Biblioteca</a></li>
-    <li><a href="#">Horários</a></li>
+    <li><a href="#" class="horario">Horários</a></li>
     <li><a href="https://sistemas.ufac.br/eticket/login/" target="_blank" rel="noopener noreferrer">Ticket RU</a></li>
     <li><a href="#">Notícias</a></li>
   </ul>

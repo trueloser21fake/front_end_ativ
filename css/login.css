@@ -11,6 +11,27 @@ body{
 
 }
 
+.login_main{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.login_aluno_tittle{
+    
+    font-size: 28px;
+    color:#0C4DA2;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px 100px 10px 10px ;
+    padding: 20px;
+    padding-top: 30px;
+    z-index: 1;
+
+}
 
 .login_sec{
 
@@ -37,14 +58,14 @@ body{
 .login_logo {
     
     padding-bottom: 15px;
-    width: 55px;
-    height: 82px;
+    width: 105px;
+    height: 80px;
     animation: pulsarLogo 1.5s ease-in-out infinite;
     cursor: pointer;
 }
 
 
-@keyframes pulsarLogo {
+/*@keyframes pulsarLogo {
     0% {
         transform: scale(1);
     }
@@ -54,7 +75,7 @@ body{
     100% {
         transform: scale(1); 
     }
-}
+}*/
 .container_login_imgs{
 
     display: flex;
@@ -145,7 +166,6 @@ body{
 
     transform: scale(1.1);
     transition-duration: 1s;
-    text-shadow: 0 0 5px rgb(255, 255, 255);
 
     cursor: pointer;
 

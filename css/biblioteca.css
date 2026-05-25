@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.barra-pesquisa {
+    width: 90%;
+    max-width: 1000px;
+    margin: 130px auto;
+    padding: 0 20px;
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 26px;
+    }
+}
+
+input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.botoes-pesquisa {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #0c4da2;
+    color: white;
+    cursor: pointer;
+}

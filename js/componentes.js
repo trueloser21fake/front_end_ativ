@@ -10,7 +10,7 @@ function mountHeader() {
   const itens = [
     { label: "Início",         href: "#" },
     { label: "Portal do Aluno", href: "portal_aluno.html" },
-    { label: "Biblioteca",     href: "#" },
+    { label: "Biblioteca",     href: "biblioteca.html" },
     { label: "Horários",       href: "horarios.html" },
     { label: "Ticket RU",      href: "https://sistemas.ufac.br/eticket/login/", externo: true },
     { label: "Notícias",       href: "#" },

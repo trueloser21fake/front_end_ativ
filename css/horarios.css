@@ -1,57 +1,136 @@
-
 * {
-    margin: 0%;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #FAF8F5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #1f2937;
 }
 
-.logo {
-    background-color: #0C4DA2;
-
-    h1 {
-        color: white;
-        display: flex;
-        gap: 30px;
-        align-items: center;
-        margin-left: 40px;
-        font-size: 32px;
-    }
-
-    img {
-        height: 80px;
-        width: 70px;
-    }
-
-    .textLogo {
-        color: white;
-        margin-left: 20px;
-        padding: 20px;
-    }
-
+/* Barra principal (Do topo da página*/
+.barra-principal {
+    background-color: white;
+    height: 74px;
+    padding: 0 60px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.principal {
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-ufac {
+    height: 30px;
+    width: auto;
+}
+
+.linha {
+    width: 1px;
+    height: 28px;
+    background-color: #e5e7eb;
+}
+
+.nome-sistema {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #6b7280;
+}
+
+.menu-topo {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-topo li {
+    list-style: none;
+}
+
+.menu-topo a {
+    display: block;
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.menu-topo a:hover {
+    background-color: #eef6ff;
+    color: #005baa;
+}
+
+.menu-topo a.ativo {
+    background-color: #eef3fb;
+    color: #2f5597;
+    font-weight: bold;
+}
+
+.area-usuario {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.icone-notificacao {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-modo-escuro {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-usuario {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabelaPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 100%;
-    margin: 40px auto;
-   padding: 16px;
-   border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
 }
 
 .informacao {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
 }
 
-.informacao div, .informacao td {
+.informacao div,
+.informacao td {
     background: white;
     padding: 12px;
     border: 1px solid #6C757D;
@@ -64,7 +143,7 @@ body {
 
 table {
     width: 100%;
-    border-collapse: collapse; 
+    border-collapse: collapse;
     background-color: white;
 }
 
@@ -76,7 +155,7 @@ td {
 
 th {
     padding: 16px;
-    background-color: #0C4DA2; 
+    background-color: #0C4DA2;
     color: white;
     text-transform: uppercase;
     font-size: 12px;
@@ -84,7 +163,7 @@ th {
 }
 
 td:first-child {
-    font-weight: 700;
+    font-weight: 800;
     background-color: #FAF8F5;
     color: #4b5563;
     width: 100px;

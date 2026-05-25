@@ -72,6 +72,7 @@ th, td {
     text-align: center;
      text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-align: center;
 }
 
 td:first-child {
@@ -84,3 +85,4 @@ td:not(:first-child):not(:empty) {
     background-color: #3f83f756;
 }
 /* Fim da tabela de horarios*/
+

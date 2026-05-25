@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-.menu-topo a.horario {
-  background-color: #eef3fb;
-  color: #2f5597;
-  font-weight: bold;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f6f8;
@@ -69,6 +63,8 @@ th, td {
 }
 
 .tabelaPrincipal th {
+    background-color:  #005baa;
+    color: white;
     text-align: center;
      text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -85,4 +81,3 @@ td:not(:first-child):not(:empty) {
     background-color: #3f83f756;
 }
 /* Fim da tabela de horarios*/
-

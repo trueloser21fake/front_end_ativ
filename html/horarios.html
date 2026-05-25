@@ -1,98 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/horarios.css">
     <link rel="shortcut icon" href="../assets/Logo UFAC.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/portal_aluno.css">
+    <link rel="stylesheet" href="../css/perfil.css">
 
     <title>Horarios</title>
 </head>
 
 <body>
-    <nav class="barra-principal">
 
-        <div class="marca">
-            <img src="../assets/Logo Ufac (2).svg" alt="Logo da UFAC" class="logo-ufac">
-            <div class="linha"></div>
-            <div class="nome-sistema">Portal do Aluno</div>
+    <div id="header"></div>
+
+    <header class="topo">
+        <div>
+            <h1>Quadro de Horários</h1>
+            <p>Horários das disciplinas - período 2026.1</p>
+        </div>
+    </header>
+
+    <div class="tabelaPrincipal">
+
+        <div class="informacao">
+            <div>Matrícula: *****</div>
+            <div>Período de Matrícula: *****</div>
+            <div>Curso: ***********</div>
+            <div>Período Atual: *</div>
         </div>
 
-        <ul class="menu-topo">
-            <li><a href="#">Início</a></li>
-            <li><a href="#" class="ativo">Portal do Aluno</a></li>
-            <li><a href="#">Biblioteca</a></li>
-            <li><a href="#">Horários</a></li>
-            <li><a href="#">Ticket RU</a></li>
-            <li><a href="#">Notícias</a></li>
-        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Quadro de Horários</th>
+                    <th>Domingo</th>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                    <th>Sábado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>07:30 - 09:10</td>
+                    <td></td>
+                    <td>Arquitetura de Comp.</td>
+                    <td>Arquitetura de Comp.</td>
+                    <td>Tópicos de Cálculo II</td>
+                    <td>Marketing T.</td>
+                    <td>Tópicos de Cálculo II</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9:10 - 9:20</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>09:20 - 11:00</td>
+                    <td></td>
+                    <td>Economia e Finanças</td>
+                    <td>Linguagem de Prog.</td>
+                    <td>Fundamentos de SI</td>
+                    <td>Economia e Finanças</td>
+                    <td>Linguagem de Prog.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-        <div class="area-usuario">
-            <img src="../assets/ícones/portal/modo-escuro.png" alt="Modo Escuro" class="icone-modo-escuro">
-            <img src="../assets/ícones/portal/sino.png" alt="Notificações" class="icone-notificacao">
-            <img src="../assets/ícones/portal/usuario.png" alt="Perfil do Usuário" class="icone-usuario">
-            <strong>Rani</strong>
-        </div>
-    </nav>
-
-        <div class="tabelaPrincipal">
-
-            <div class="informacao">
-                <div>Matrícula: *****</div>
-                <div>Período de Matrícula: *****</div>
-                <div>Curso: ***********</div>
-                <div>Período Atual: *</div>
-            </div>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Quadro de Horários</th>
-                        <th>Domingo</th>
-                        <th>Segunda</th>
-                        <th>Terça</th>
-                        <th>Quarta</th>
-                        <th>Quinta</th>
-                        <th>Sexta</th>
-                        <th>Sábado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>07:30 - 09:10</td>
-                        <td></td>
-                        <td>Arquitetura de Comp.</td>
-                        <td>Arquitetura de Comp.</td>
-                        <td>Tópicos de Cálculo II</td>
-                        <td>Marketing T.</td>
-                        <td>Tópicos de Cálculo II</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>9:10 - 9:20</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>09:20 - 11:00</td>
-                        <td></td>
-                        <td>Economia e Finanças</td>
-                        <td>Linguagem de Prog.</td>
-                        <td>Fundamentos de SI</td>
-                        <td>Economia e Finanças</td>
-                        <td>Linguagem de Prog.</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
+    <div id="footer"></div>
+    <script src="../js/componentes.js"></script>
 
 </body>
 

@@ -5,9 +5,15 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, sans-serif;
   background-color: #f4f6f8;
   color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.conteudo {
+  flex: 1;
 }
 
 /* Barra principal (Do topo da página*/
@@ -109,3 +115,66 @@ body {
     align-items: center;
     justify-content: center;
 }
+/* Termina aqui a Barra principal */
+
+/* CSS do Rodapé */
+.rodape {
+  background-color: white;
+  margin-top: 50px;
+  padding: 36px 60px 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.rodape-coluna a {
+  display: block;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.rodape-coluna a:hover {
+  color: #005baa;
+}
+
+.rodape-conteudo {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo-rodape {
+  height: 36px;
+  width: auto;
+  margin-bottom: 16px;
+}
+
+.rodape-coluna h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.rodape-coluna p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.rodape-baixo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.rodape-baixo p {
+  color: #6b7280;
+  font-size: 14px;
+}
+/* Termina aqui o CSS do Rodapé  */

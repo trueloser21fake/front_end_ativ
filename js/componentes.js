@@ -1,33 +1,51 @@
-const header = `
+function mountHeader() {
+  const el = document.getElementById("header");
+  const nome = el.dataset.nome || "Usuário";
+  const iniciais = el.dataset.iniciais || "?";
+  const botaoLabel = el.dataset.botaoLabel || nome;
+  const botaoHref = el.dataset.botaoHref || "perfil.html";
+
+  const paginaAtual = window.location.pathname.split("/").pop();
+
+  const itens = [
+    { label: "Início",         href: "#" },
+    { label: "Portal do Aluno", href: "portal_aluno.html" },
+    { label: "Biblioteca",     href: "#" },
+    { label: "Horários",       href: "horarios.html" },
+    { label: "Ticket RU",      href: "https://sistemas.ufac.br/eticket/login/", externo: true },
+    { label: "Notícias",       href: "#" },
+  ];
+
+  const menuHTML = itens.map(item => {
+    const ativo = item.href !== "#" && item.href.endsWith(paginaAtual) ? ' class="ativo"' : "";
+    const attrs = item.externo ? ' target="_blank" rel="noopener noreferrer"' : "";
+    return `<li><a href="${item.href}"${attrs}${ativo}>${item.label}</a></li>`;
+  }).join("\n    ");
+
+  el.innerHTML = `
 <nav class="barra-principal">
 
   <div class="marca">
     <img src="../assets/Logo Ufac (2).svg" alt="Logo da UFAC" class="logo-ufac">
-    <div class="linha"></div>
-    <div class="nome-sistema">Portal do Aluno</div>
   </div>
 
   <ul class="menu-topo">
-    <li><a href="portal_aluno.html">Início</a></li>
-    <li><a href="portal_aluno.html">Portal do Aluno</a></li>
-    <li><a href="#">Biblioteca</a></li>
-    <li><a href="#" class="horario">Horários</a></li>
-    <li><a href="https://sistemas.ufac.br/eticket/login/" target="_blank" rel="noopener noreferrer">Ticket RU</a></li>
-    <li><a href="#">Notícias</a></li>
+    ${menuHTML}
   </ul>
 
   <div class="area-usuario">
     <img src="../assets/ícones/portal/modo-escuro.png" alt="Modo Escuro" class="icone-modo-escuro">
     <img src="../assets/ícones/portal/sino.png" alt="Notificações" class="icone-notificacao">
 
-    <a href="perfil.html" class="botao-perfil">
-      <span class="avatar-iniciais">RB</span>
-      <strong>Rani</strong>
+    <a href="${botaoHref}" class="botao-perfil">
+      <span class="avatar-iniciais">${iniciais}</span>
+      <strong>${botaoLabel}</strong>
     </a>
   </div>
 
 </nav>
 `;
+}
 
 const footer = `
 <footer class="rodape">
@@ -79,5 +97,5 @@ const footer = `
 </footer>
 `;
 
-document.getElementById("header").innerHTML = header;
+mountHeader();
 document.getElementById("footer").innerHTML = footer;

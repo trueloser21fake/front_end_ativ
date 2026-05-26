@@ -13,7 +13,7 @@ function mountHeader() {
     { label: "Biblioteca",     href: "biblioteca.html" },
     { label: "Horários",       href: "horarios.html" },
     { label: "Ticket RU",      href: "https://sistemas.ufac.br/eticket/login/", externo: true },
-    { label: "Notícias",       href: "#" },
+    { label: "Notícias",       href: "noticias.html" },
   ];
 
   const menuHTML = itens.map(item => {
@@ -29,9 +29,15 @@ function mountHeader() {
     <img src="../assets/Logo Ufac (2).svg" alt="Logo da UFAC" class="logo-ufac">
   </div>
 
-  <ul class="menu-topo">
+  <ul class="menu-topo" id="menu-topo">
     ${menuHTML}
   </ul>
+
+  <button class="menu-hamburger" id="menu-hamburger" aria-label="Abrir menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
   <div class="area-usuario">
     <img src="../assets/ícones/portal/modo-escuro.png" alt="Modo Escuro" class="icone-modo-escuro">
@@ -45,6 +51,12 @@ function mountHeader() {
 
 </nav>
 `;
+
+  document.getElementById("menu-hamburger").addEventListener("click", function () {
+    const menu = document.getElementById("menu-topo");
+    const aberto = menu.classList.toggle("aberto");
+    this.setAttribute("aria-expanded", aberto);
+  });
 }
 
 const footer = `

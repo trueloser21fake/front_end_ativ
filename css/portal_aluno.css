@@ -504,4 +504,11 @@ td {
     white-space: normal;
     min-width: 100px;
   }
+
+  .menu-lateral{
+    margin-left: 20%;
+  }
+  .duas-colunas .bloco {
+     width:100%; 
+}
 }

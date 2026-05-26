@@ -214,7 +214,7 @@ function mountMenuLateral() {
     { label: "Horários",         href: "horarios.html",     icone: "sentido-anti-horario.png", alt: "Ícone de Horários" },
     { label: "Notas",            href: "notas.html",        icone: "nota.png",                 alt: "Ícone de Notas" },
     { label: "Calendário",       href: "calendario.html",   icone: "calendario.png",           alt: "Ícone de Calendário" },
-    { label: "Links Externos",                               icone: "links.png",               alt: "Ícone de Links" },
+    { label: "Links Externos",   href: "links_externos.html",icone: "links.png",               alt: "Ícone de Links" },
   ];
 
   const itensHTML = itens.map(item => {

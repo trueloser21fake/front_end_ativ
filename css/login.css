@@ -6,7 +6,6 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Inter', sans-serif;
-
 }
 
 .login-main{
@@ -129,6 +128,8 @@ body{
     color: rgb(255, 255, 255);
 }
 
-@media screen and (max-width: 768px) {
-    
+@media (max-width: 430px) {
+    .container-login-logo .login-img{
+        display: none;
+    }
 }

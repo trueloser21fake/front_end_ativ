@@ -205,4 +205,17 @@
     gap: 28px;
     flex-direction: column;
   }
+  .conteudo{
+    padding: 0px;
+  }
+  h1{
+    text-align: center;
+  }
+  .curso{
+    text-align: center;
+  }
+  .perfil-tag{
+    margin-left: 26px;
+  }
+
 }

@@ -108,14 +108,7 @@ const footer = `
       <p>Rod. BR 364, Km 04, Rio Branco — AC.</p>
     </div>
 
-    <div class="rodape-coluna">
-      <h3>Sistemas</h3>
-      <a href="../index.html"><p>Portal do Aluno</p></a>
-      <a href="../biblioteca.html"><p>Biblioteca</p></a>
-      <a href="https://sistemas.ufac.br/eticket/login/" target="_blank" rel="noopener noreferrer"><p>Ticket RU</p></a>
-      <p>Horários</p>
-    </div>
-
+    
     <div class="rodape-coluna">
       <h3>Institucional</h3>
       <a href="https://www.ufac.br/site/ufac/institucional"><p>Reitoria</p></a>

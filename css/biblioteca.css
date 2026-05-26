@@ -56,3 +56,88 @@ button:hover {
     background: #0966de;
     transition-duration: 1s;
 }
+.escondido {
+    display: none !important;
+}
+
+#resultados-busca {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 60px auto; /* Centraliza exatamente como a sua barra de pesquisa */
+    padding-top: 30px;
+    border-top: 1px solid #cbd5e1;
+    animation: fadeIn 0.5s ease;
+}
+
+.titulo-resultados {
+    color: #1f2937;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.grid-livros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.livro-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(108, 117, 125, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease;
+}
+
+.livro-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(12, 77, 162, 0.08);
+    border-color: #0c4da2;
+}
+
+.livro-info h4 {
+    color: #0c4da2;
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.livro-info p {
+    color: #6C757D;
+    font-size: 13px;
+    margin: 0 0 10px 0;
+}
+
+.badge-formato {
+    background-color: #eef6ff;
+    color: #0c4da2;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Reutilizando as suas animações de botão de 1s */
+.btn-baixar-livro {
+    background: #0c4da2;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition-duration: 1s;
+}
+
+.btn-baixar-livro:hover {
+    background: #0966de;
+    transition-duration: 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

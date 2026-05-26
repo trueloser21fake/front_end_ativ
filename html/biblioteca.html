@@ -10,28 +10,63 @@
     <link rel="stylesheet" href="../css/portal_aluno.css">
     <title>Biblioteca</title>
 </head>
-<div id="header" data-nome="Rani" data-iniciais="RB"></div>
-
-<header class="topo">
-    <div>
-        <h1>Biblioteca</h1>
-        <p> Pesquisar Acervo, Renovação e Aquisição - período 2026.1</p>
-    </div>
-</header>
 
 <body>
+    <div id="header" data-nome="Rani" data-iniciais="RB"></div>
+
+    <header class="topo">
+        <div>
+            <h1>Biblioteca</h1>
+            <p> Pesquisar Acervo, Renovação e Aquisição - período 2026.1</p>
+        </div>
+    </header>
 
     <div class="barra-pesquisa">
         <h2>Pesquisar Acervo</h2>
         <input id="pesquisa" type="search" placeholder="Buscar autor, título ou assunto">
         <div class="botoes-pesquisa">
-            <button>Pesquisar</button>
+            <button id="btn-pesquisa">Pesquisar</button>
             <button>Pesquisa Avançada</button>
         </div>
     </div>
 
-      <div id="footer"></div>
+    <div id="resultados-busca" class="escondido">
+        <h3 class="titulo-resultados">Resultados encontrados:</h3>
+        
+        <div class="grid-livros">
+            <div class="livro-card">
+                <div class="livro-info">
+                    <h4>A Lógica do Jogo: Desenvolvimento</h4>
+                    <p>Autor: Norte Brasil Game Dev | Ano: 2025</p>
+                    <span class="badge-formato">PDF</span>
+                </div>
+                <a href="#" download class="btn-baixar-livro">Baixar</a>
+            </div>
+
+            <div class="livro-card">
+                <div class="livro-info">
+                    <h4>Design de Interfaces Profissionais</h4>
+                    <p>Autor: UI/UX Academy | Ano: 2024</p>
+                    <span class="badge-formato">EPUB</span>
+                </div>
+                <a href="#" download class="btn-baixar-livro">Baixar</a>
+            </div>
+
+            <div class="livro-card">
+                <div class="livro-info">
+                    <h4>Inteligência Artificial Aplicada</h4>
+                    <p>Autor: Google AI Studio | Ano: 2026</p>
+                    <span class="badge-formato">PDF</span>
+                </div>
+                <a href="#" download class="btn-baixar-livro">Baixar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
     <script src="../js/componentes.js"></script>
+    <script src="../js/biblioteca.js"></script>
+    
 </body>
 
 </html>

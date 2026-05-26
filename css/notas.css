@@ -1,13 +1,13 @@
-
-
 main {
     display: flex;
+    flex: 1;
     gap: 24px;
     padding: 30px 60px;
-
 }
-main .sistema-container {
-    width: 100%;
+
+
+.opaa .sistema-container {
+    width: 1120px;
     padding: 20px;
     background-color: white;
     border-radius: 10px;

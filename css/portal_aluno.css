@@ -256,6 +256,14 @@
   background-color: #eef6ff;
   color: #005baa;
 }
+
+.menu-lateral li.ativo {
+  background-color: #eef6ff;
+  color: #005baa;
+  font-weight: 600;
+  border-left: 3px solid #005baa;
+  padding-left: 7px;
+}
 .menu-lateral a {
   text-decoration: none; 
   color: inherit; 

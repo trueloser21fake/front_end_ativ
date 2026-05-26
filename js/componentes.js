@@ -4,20 +4,33 @@ function mountHeader() {
   const iniciais = el.dataset.iniciais || "?";
   const botaoLabel = el.dataset.botaoLabel || nome;
   const botaoHref = el.dataset.botaoHref || "perfil.html";
+  const modoLanding = el.dataset.nav === "landing";
 
   const paginaAtual = window.location.pathname.split("/").pop();
 
-  const itens = [
-    { label: "Início",         href: "#" },
+  const itensPortal = [
     { label: "Portal do Aluno", href: "portal_aluno.html" },
-    { label: "Biblioteca",     href: "biblioteca.html" },
-    { label: "Horários",       href: "horarios.html" },
-    { label: "Ticket RU",      href: "https://sistemas.ufac.br/eticket/login/", externo: true },
-    { label: "Notícias",       href: "noticias.html" },
+    { label: "Biblioteca",      href: "biblioteca.html" },
+    { label: "Horários",        href: "horarios.html" },
+    { label: "Ticket RU",       href: "https://sistemas.ufac.br/eticket/login/", externo: true },
+    { label: "Notícias",        href: "noticias.html" },
   ];
 
-  const menuHTML = itens.map(item => {
-    const ativo = item.href !== "#" && item.href.endsWith(paginaAtual) ? ' class="ativo"' : "";
+  if (modoLanding) {
+    el.innerHTML = `
+<nav class="barra-principal">
+  <div class="marca">
+    <img src="../assets/Logo Ufac (2).svg" alt="Logo da UFAC" class="logo-ufac">
+  </div>
+  <div class="area-usuario">
+    <a href="${botaoHref}" class="botao-perfil botao-entrar">${botaoLabel}</a>
+  </div>
+</nav>`;
+    return;
+  }
+
+  const menuHTML = itensPortal.map(item => {
+    const ativo = item.href.endsWith(paginaAtual) ? ' class="ativo"' : "";
     const attrs = item.externo ? ' target="_blank" rel="noopener noreferrer"' : "";
     return `<li><a href="${item.href}"${attrs}${ativo}>${item.label}</a></li>`;
   }).join("\n    ");
@@ -43,10 +56,17 @@ function mountHeader() {
     <img src="../assets/ícones/portal/modo-escuro.png" alt="Modo Escuro" class="icone-modo-escuro">
     <img src="../assets/ícones/portal/sino.png" alt="Notificações" class="icone-notificacao">
 
-    <a href="${botaoHref}" class="botao-perfil">
-      <span class="avatar-iniciais">${iniciais}</span>
-      <strong>${botaoLabel}</strong>
-    </a>
+    <div class="usuario-dropdown" id="usuario-dropdown">
+      <button class="botao-perfil" id="botao-perfil" aria-expanded="false">
+        <span class="avatar-iniciais">${iniciais}</span>
+        <strong>${botaoLabel}</strong>
+        <span class="dropdown-caret">▾</span>
+      </button>
+      <div class="dropdown-menu" id="dropdown-menu">
+        <a href="perfil.html" class="dropdown-item">Ver perfil</a>
+        <a href="inicio.html" class="dropdown-item dropdown-item--sair">Sair</a>
+      </div>
+    </div>
   </div>
 
 </nav>
@@ -56,6 +76,21 @@ function mountHeader() {
     const menu = document.getElementById("menu-topo");
     const aberto = menu.classList.toggle("aberto");
     this.setAttribute("aria-expanded", aberto);
+  });
+
+  const botaoPerfil = document.getElementById("botao-perfil");
+  const dropdownMenu = document.getElementById("dropdown-menu");
+
+  botaoPerfil.addEventListener("click", function () {
+    const aberto = dropdownMenu.classList.toggle("aberto");
+    this.setAttribute("aria-expanded", aberto);
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!document.getElementById("usuario-dropdown").contains(e.target)) {
+      dropdownMenu.classList.remove("aberto");
+      botaoPerfil.setAttribute("aria-expanded", false);
+    }
   });
 }
 
@@ -109,5 +144,63 @@ const footer = `
 </footer>
 `;
 
+function mountBreadcrumb() {
+  const topo = document.querySelector('.topo');
+  if (!topo) return;
+
+  const pagina = window.location.pathname.split('/').pop() || 'inicio.html';
+
+  const mapa = {
+    'portal_aluno.html': {
+      label: 'Portal do Aluno',
+      ancestrais: [{ label: 'Início', href: 'inicio.html' }]
+    },
+    'notas.html': {
+      label: 'Notas',
+      ancestrais: [{ label: 'Início', href: 'inicio.html' }, { label: 'Portal do Aluno', href: 'portal_aluno.html' }]
+    },
+    'relatorio.html': {
+      label: 'Relatórios',
+      ancestrais: [{ label: 'Início', href: 'inicio.html' }, { label: 'Portal do Aluno', href: 'portal_aluno.html' }]
+    },
+    'perfil.html': {
+      label: 'Perfil',
+      ancestrais: [{ label: 'Início', href: 'inicio.html' }]
+    },
+    'biblioteca.html': {
+      label: 'Biblioteca',
+      ancestrais: [{ label: 'Início', href: 'inicio.html' }]
+    },
+    'horarios.html': {
+      label: 'Horários',
+      ancestrais: [{ label: 'Início', href: 'inicio.html' }]
+    },
+    'noticias.html': {
+      label: 'Notícias',
+      ancestrais: [{ label: 'Início', href: 'inicio.html' }]
+    },
+    'calendario.html': {
+      label: 'Calendário',
+      ancestrais: [{ label: 'Início', href: 'inicio.html' }]
+    },
+  };
+
+  const info = mapa[pagina];
+  if (!info) return;
+
+  const itensHTML = [
+    ...info.ancestrais.map(a => `<a href="${a.href}" class="breadcrumb-link">${a.label}</a>`),
+    `<span class="breadcrumb-atual">${info.label}</span>`
+  ].join('<span class="breadcrumb-sep"> › </span>');
+
+  const nav = document.createElement('nav');
+  nav.className = 'breadcrumb';
+  nav.setAttribute('aria-label', 'Navegação estrutural');
+  nav.innerHTML = itensHTML;
+
+  topo.insertBefore(nav, topo.firstChild);
+}
+
 mountHeader();
+mountBreadcrumb();
 document.getElementById("footer").innerHTML = footer;

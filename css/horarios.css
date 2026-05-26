@@ -1,20 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
-    color: #1f2937;
-}
-
-
-h2 {
-   margin-top: 20px;
-   margin-left: 40px;
-   font-size: 20px;
+.conteudo {
+    align-items: center;
+    padding: 20px;
 }
 
 /* Tabela de horários*/
@@ -39,8 +25,7 @@ h2 {
 
 .informacao div,
 .informacao td,
-.informacao th
- {
+.informacao th {
     background: white;
     padding: 12px;
     border: 1px solid #6C757D;
@@ -56,7 +41,8 @@ table {
     background-color: white;
 }
 
-th, td {
+th,
+td {
     padding: 16px;
     text-align: center;
     border: 2px solid rgba(0, 0, 0, 0.151);
@@ -68,10 +54,10 @@ th, td {
 }
 
 .tabelaPrincipal th {
-    background-color:  #005baa;
+    background-color: #005baa;
     color: white;
     text-align: center;
-     text-transform: uppercase;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
     text-align: center;
 }
@@ -85,6 +71,7 @@ td:first-child {
 td:not(:first-child):not(:empty) {
     background-color: #3f83f756;
 }
+
 /* Fim da tabela de horarios*/
 
 @media (max-width: 430px) {
@@ -101,8 +88,7 @@ td:not(:first-child):not(:empty) {
 
     .informacao div,
     .informacao td,
-    .informacao th
-    {
+    .informacao th {
         background: white;
         padding: 12px;
         border: 1px solid #6C757D;

@@ -1,17 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Inter, sans-serif;
-  background-color: #f4f6f8;
-  color: #1f2937;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 .conteudo {
   flex: 1;
 }
@@ -247,20 +233,24 @@ body {
   height: fit-content;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+
 .menu-lateral h2 {
   font-size: 16px;
   margin-bottom: 15px;
   color: #005baa;
 }
+
 .menu-lateral ul {
   list-style: none;
 }
+
 .menu-lateral li {
   padding: 10px;
   border-bottom: 1px solid #e5e7eb;
   cursor: pointer;
   font-size: 16px;
 }
+
 .menu-lateral li:hover {
   background-color: #eef6ff;
   color: #005baa;

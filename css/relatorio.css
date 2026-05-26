@@ -9,7 +9,6 @@
 }
 
 .fds_smp {
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -57,7 +56,7 @@
 .fds p {
 
     text-align: center;
-    color: #212529;
+    color: #005baa;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 16px;

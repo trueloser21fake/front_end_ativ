@@ -58,7 +58,7 @@ function mountHeader() {
   </button>
 
   <div class="area-usuario">
-    <img src="../assets/ícones/portal/sino.png" alt="Notificações" class="icone-notificacao">
+    <a href="notificacoes.html"><img src="../assets/ícones/portal/sino.png" alt="Notificações" class="icone-notificacao"></a>
 
     <div class="usuario-dropdown" id="usuario-dropdown">
       <button class="botao-perfil" id="botao-perfil" aria-expanded="false">
@@ -180,6 +180,10 @@ function mountBreadcrumb() {
       label: 'Calendário',
       ancestrais: [{ label: 'Início', href: 'inicio.html' }]
     },
+    'notificacoes.html': {
+      label: 'Notificações',
+      ancestrais: [{ label: 'Início', href: 'inicio.html' }]
+    },
   };
 
   const info = mapa[pagina];
@@ -210,7 +214,7 @@ function mountMenuLateral() {
     { label: "Horários",         href: "horarios.html",     icone: "sentido-anti-horario.png", alt: "Ícone de Horários" },
     { label: "Notas",            href: "notas.html",        icone: "nota.png",                 alt: "Ícone de Notas" },
     { label: "Calendário",       href: "calendario.html",   icone: "calendario.png",           alt: "Ícone de Calendário" },
-    { label: "Links Externos",                               icone: "links.png",               alt: "Ícone de Links" },
+    { label: "Links Externos",   href: "links_externos.html",icone: "links.png",               alt: "Ícone de Links" },
   ];
 
   const itensHTML = itens.map(item => {

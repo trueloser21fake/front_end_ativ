@@ -11,7 +11,7 @@ function mountHeader() {
   const itensPortal = [
     { label: "Portal do Aluno", href: "portal_aluno.html" },
     { label: "Biblioteca",      href: "biblioteca.html" },
-    { label: "Horários",        href: "horarios.html" },
+    { label: "Calendário",        href: "calendario.html" },
     { label: "Ticket RU",       href: "https://sistemas.ufac.br/eticket/login/", externo: true },
     { label: "Notícias",        href: "noticias.html" },
   ];
@@ -53,7 +53,6 @@ function mountHeader() {
   </button>
 
   <div class="area-usuario">
-    <img src="../assets/ícones/portal/modo-escuro.png" alt="Modo Escuro" class="icone-modo-escuro">
     <img src="../assets/ícones/portal/sino.png" alt="Notificações" class="icone-notificacao">
 
     <div class="usuario-dropdown" id="usuario-dropdown">
@@ -106,8 +105,8 @@ const footer = `
 
     <div class="rodape-coluna">
       <h3>Sistemas</h3>
-      <p>Portal do Aluno</p>
-      <p>Biblioteca</p>
+      <a href="../index.html"><p>Portal do Aluno</p></a>
+      <a href="../biblioteca.html"><p>Biblioteca</p></a>
       <a href="https://sistemas.ufac.br/eticket/login/" target="_blank" rel="noopener noreferrer"><p>Ticket RU</p></a>
       <p>Horários</p>
     </div>

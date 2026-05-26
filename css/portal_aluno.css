@@ -232,6 +232,7 @@
   padding: 20px;
   height: fit-content;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  
 }
 
 .menu-lateral h2 {
@@ -255,12 +256,18 @@
   background-color: #eef6ff;
   color: #005baa;
 }
+.menu-lateral a {
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+}
 
 .icone-menu {
   width: 20px;
   height: 20px;
   border-radius: 4px;
   margin-right: 5px;
+  
 }
 
 .area-principal {

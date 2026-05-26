@@ -18,6 +18,11 @@
     border-radius: 8px;
     border: 1px solid #e2e8f0;
     border: none;
+
+    span {
+        font-weight: 600;
+        color: #005baa;
+    }
 }
 
 .informacao div,

@@ -8,6 +8,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Inter', sans-serif;
+    
 
 }
 
@@ -176,4 +177,80 @@ body{
     font-size: 16px;
     font-weight: 500;
     color: rgb(255, 255, 255);
+}
+
+.test{
+
+    width: 25px;
+    height: 120px;
+    background-color: rgb(229, 255, 0);
+    position: absolute;
+    top: 25px;
+    left: 15%;
+}
+.test_test{
+
+    width: 105px;
+    height: 25px;
+    background-color: rgb(229, 255, 0);
+    top: 30px;
+    left: 15%;
+    transition-duration: 1s;
+    
+
+}
+.test:hover{
+
+    transform: scale(1.1);
+    transition-duration: 1s;
+
+
+}
+
+.test_in{
+    width: 25px;
+    height:  105px;
+    background-color: rgb(229, 255, 0);
+    position: absolute;
+    bottom: 25px;
+    right: 17%;
+    transform: rotate(180deg);
+
+}
+.test_in:hover{
+
+    transform: scale(1.1);
+    transition-duration: 1s;
+    transform: rotate(180deg);
+}
+
+.test_test_in{
+
+    width: 105px;
+    height: 25px;
+    background-color: rgb(229, 255, 0);
+    bottom: 30px;
+    right: 15%;
+}
+
+@media (max-width: 1245px){
+
+    .test{
+        display: none;
+        visibility: hidden;
+
+    }
+    .test_in{
+        display: none;
+        visibility: hidden;
+
+    }
+    .login_sec{
+        flex-direction: column;
+        scale: 1;
+    }
+    .container_login_imgs{
+        visibility: hidden;
+        display: none;
+    }
 }

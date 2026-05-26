@@ -8,10 +8,12 @@ function mountHeader() {
 
   const paginaAtual = window.location.pathname.split("/").pop();
 
+  const paginasPortal = new Set(["portal_aluno.html", "notas.html", "relatorio.html", "horarios.html"]);
+
   const itensPortal = [
     { label: "Portal do Aluno", href: "portal_aluno.html" },
     { label: "Biblioteca",      href: "biblioteca.html" },
-    { label: "Calendário",        href: "calendario.html" },
+    { label: "Calendário",      href: "calendario.html" },
     { label: "Ticket RU",       href: "https://sistemas.ufac.br/eticket/login/", externo: true },
     { label: "Notícias",        href: "noticias.html" },
   ];
@@ -30,7 +32,10 @@ function mountHeader() {
   }
 
   const menuHTML = itensPortal.map(item => {
-    const ativo = item.href.endsWith(paginaAtual) ? ' class="ativo"' : "";
+    const isAtivo = item.href === "portal_aluno.html"
+      ? paginasPortal.has(paginaAtual)
+      : item.href.endsWith(paginaAtual);
+    const ativo = isAtivo ? ' class="ativo"' : "";
     const attrs = item.externo ? ' target="_blank" rel="noopener noreferrer"' : "";
     return `<li><a href="${item.href}"${attrs}${ativo}>${item.label}</a></li>`;
   }).join("\n    ");
@@ -200,6 +205,39 @@ function mountBreadcrumb() {
   topo.insertBefore(nav, topo.firstChild);
 }
 
+function mountMenuLateral() {
+  const el = document.getElementById("menu-lateral");
+  if (!el) return;
+
+  const paginaAtual = window.location.pathname.split("/").pop();
+
+  const itens = [
+    { label: "Visão Geral",      href: "portal_aluno.html", icone: "menu-principal.png",      alt: "Ícone de Visão Geral" },
+    { label: "Relatórios",       href: "relatorio.html",    icone: "painel.png",               alt: "Ícone de Relatórios" },
+    { label: "Horários",         href: "horarios.html",     icone: "sentido-anti-horario.png", alt: "Ícone de Horários" },
+    { label: "Notas",            href: "notas.html",        icone: "nota.png",                 alt: "Ícone de Notas" },
+    { label: "Calendário",       href: "calendario.html",   icone: "calendario.png",           alt: "Ícone de Calendário" },
+    { label: "Links Externos",                               icone: "links.png",               alt: "Ícone de Links" },
+  ];
+
+  const itensHTML = itens.map(item => {
+    const ativo = item.href && item.href === paginaAtual ? ' class="ativo"' : "";
+    const iconeHTML = `<img src="../assets/ícones/portal/${item.icone}" alt="${item.alt}" class="icone-menu">`;
+    if (item.href) {
+      return `<li${ativo}><a href="${item.href}">${iconeHTML} ${item.label}</a></li>`;
+    }
+    return `<li>${iconeHTML} ${item.label}</li>`;
+  }).join("\n        ");
+
+  el.outerHTML = `<section class="menu-lateral">
+      <h2>Menu</h2>
+      <ul>
+        ${itensHTML}
+      </ul>
+    </section>`;
+}
+
 mountHeader();
+mountMenuLateral();
 mountBreadcrumb();
 document.getElementById("footer").innerHTML = footer;

@@ -86,3 +86,33 @@ td:not(:first-child):not(:empty) {
     background-color: #3f83f756;
 }
 /* Fim da tabela de horarios*/
+
+@media (max-width: 430px) {
+    .tabelaPrincipal {
+        box-shadow: none;
+    }
+
+    .informacao {
+        display: block;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+    }
+
+    .informacao div,
+    .informacao td,
+    .informacao th
+    {
+        background: white;
+        padding: 12px;
+        border: 1px solid #6C757D;
+        border-radius: 6px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .informacao div:not(:first-child) {
+        margin-top: 12px;
+    }
+}

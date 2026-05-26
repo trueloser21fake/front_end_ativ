@@ -259,7 +259,19 @@
 .menu-lateral a {
   text-decoration: none; 
   color: inherit; 
-  display: block; 
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.menu-lateral a::after {
+  content: '';
+  position: absolute;
+  top: -10px;    
+  bottom: -10px; 
+  left: -20px;  
+  right: -20px;  
+
 }
 
 .icone-menu {
@@ -492,4 +504,11 @@ td {
     white-space: normal;
     min-width: 100px;
   }
+
+  .menu-lateral{
+    margin-left: 20%;
+  }
+  .duas-colunas .bloco {
+     width:100%; 
+}
 }

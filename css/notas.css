@@ -1,0 +1,21 @@
+main {
+    display: flex;
+    gap: 24px;
+    padding: 30px 60px;
+
+}
+main .sistema-container {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+details {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #e2e8f0;
+}

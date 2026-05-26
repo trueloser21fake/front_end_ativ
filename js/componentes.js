@@ -58,7 +58,7 @@ function mountHeader() {
   </button>
 
   <div class="area-usuario">
-    <img src="../assets/ícones/portal/sino.png" alt="Notificações" class="icone-notificacao">
+    <a href="notificacoes.html"><img src="../assets/ícones/portal/sino.png" alt="Notificações" class="icone-notificacao"></a>
 
     <div class="usuario-dropdown" id="usuario-dropdown">
       <button class="botao-perfil" id="botao-perfil" aria-expanded="false">
@@ -178,6 +178,10 @@ function mountBreadcrumb() {
     },
     'calendario.html': {
       label: 'Calendário',
+      ancestrais: [{ label: 'Início', href: 'inicio.html' }]
+    },
+    'notificacoes.html': {
+      label: 'Notificações',
       ancestrais: [{ label: 'Início', href: 'inicio.html' }]
     },
   };
